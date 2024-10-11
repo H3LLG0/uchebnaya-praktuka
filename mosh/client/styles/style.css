@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    text-align: center;
+}
+.input-output {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.input {
+    padding: 3px;
+}
+.button {
+    margin-top: 10px;
+}
