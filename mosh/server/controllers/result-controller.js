@@ -23,6 +23,14 @@ class ResultController {
         
         return res.json({'result': `${multiply}`});
     }
+    async spisokAdd (req, res, next) {
+        const name = req.body.name;
+
+        console.log(name);
+
+        return res.json({'name': `${name}`});
+
+    }
 }
 
 module.exports = new ResultController();
