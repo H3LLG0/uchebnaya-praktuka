@@ -18,21 +18,7 @@ app.use('/api',router)
 const start = async () => {
     try{
         app.listen(PORT, () => console.log(`сервер запущен на порту ${PORT}`));
-        const connection = mysql.createConnection({
-            host: process.env.HOST,
-            user: process.env.USER,
-            database: process.env.DATABASE,
-            password:'',
-            port: 3307
-        });
-        connection.connect(function(err){
-            if (err) {
-              return console.error("Ошибка: " + err.message);
-            }
-            else{
-              console.log("Подключение к серверу MySQL успешно установлено");
-            }
-         });
+        
     } catch (e) {
         console.log(e);
     }
