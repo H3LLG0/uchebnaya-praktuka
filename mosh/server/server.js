@@ -4,7 +4,7 @@ const cors = require('cors');
 const router = require('./router/index');
 const cookieParser = require('cookie-parser');
 const mysql = require("mysql2");
-
+const Connection = require("./config/database");
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
