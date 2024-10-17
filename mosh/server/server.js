@@ -4,6 +4,7 @@ const cors = require('cors');
 const router = require('./router/index');
 const cookieParser = require('cookie-parser');
 const mysql = require("mysql2");
+
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,13 @@ app.use('/api',router)
 const start = async () => {
     try{
         app.listen(PORT, () => console.log(`сервер запущен на порту ${PORT}`));
+            let connection = mysql.createConnection({
+            host: process.env.HOST,
+            user: process.env.USER,
+            database: process.env.DATABASE,
+            password:'',
+            port: process.env.DB_PORT
+                });
     } catch (e) {
         console.log(e);
     }
