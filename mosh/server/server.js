@@ -4,7 +4,6 @@ const cors = require('cors');
 const router = require('./router/index');
 const cookieParser = require('cookie-parser');
 const mysql = require("mysql2");
-const Connection = require("./config/database");
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
@@ -18,7 +17,6 @@ app.use('/api',router)
 const start = async () => {
     try{
         app.listen(PORT, () => console.log(`сервер запущен на порту ${PORT}`));
-        
     } catch (e) {
         console.log(e);
     }

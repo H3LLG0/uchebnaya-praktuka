@@ -1,13 +1,9 @@
 const mysql = require("mysql2");
 
-
-
 class UserController {
     async GetUser(req, res, next){
-        try {
-
-        } catch(e) {
-            
-        }
+       console.log(123)
     }
 }
+
+module.exports = new UserController();

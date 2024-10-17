@@ -6,7 +6,7 @@ class Database {
     USER = process.env.USER;
     DATABASE = process.env.DATABASE;
 
-    GetConnection() {
+    async GetConnection() {
         try {
                 const connection = mysql.createConnection({
                 host: this.HOST,
