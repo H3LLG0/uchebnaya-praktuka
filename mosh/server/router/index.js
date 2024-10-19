@@ -9,5 +9,6 @@ const router = new Router();
 router.post('/resultPlus', jsonParser , resultController.resultPlus);
 router.post('/resultMultiply', jsonParser, resultController.resultMultiply);
 router.post('/spisokAdd',jsonParser, resultController.spisokAdd);
+router.get('/GetUser', userController.GetUser);
 
 module.exports = router;
