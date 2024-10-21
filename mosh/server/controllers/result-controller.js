@@ -1,4 +1,4 @@
-const ResultService = require('../service/result-service')
+const ResultService = require('../service/result-service');
 
 class ResultController {
     async resultPlus(req, res, next) {
@@ -25,8 +25,7 @@ class ResultController {
     }
     async spisokAdd (req, res, next) {
         const name = req.body.name;
-
-        console.log(name);
+        
 
         return res.json({'name': `${name}`});
 
