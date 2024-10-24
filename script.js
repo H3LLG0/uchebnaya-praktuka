@@ -15,6 +15,7 @@ $('#get-form').on('submit', function(event){
       })
       .then((response) => {
         if (!response.ok) {
+            $('.result').empty();
         $('.result').append(`HTTP error! Status: ${response.status}
             `);
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -23,6 +24,7 @@ $('#get-form').on('submit', function(event){
         return response.blob();
       })
       .then((response) => {
+        $('.result').empty();
         $('.result').append(`HTTP error! Status: ${response}`);
       });
 })
