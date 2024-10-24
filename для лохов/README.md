@@ -1,1 +1,0 @@
-# uchebnaya-praktuka
