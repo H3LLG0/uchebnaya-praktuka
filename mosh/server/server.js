@@ -3,6 +3,7 @@ const jsonParser = express.json();
 const cors = require('cors');
 const router = require('./router/index');
 const cookieParser = require('cookie-parser');
+const DB = require('./Database/DB')
 const mysql = require("mysql2");
 
 
@@ -20,6 +21,7 @@ app.use('/api',router)
 const start = async () => {
     try{
         app.listen(PORT, () => console.log(`сервер запущен на порту ${PORT}`));
+        let con = DB.CreateConnection();
     } catch (e) {
         console.log(e);
     }

@@ -25,9 +25,8 @@ class ResultController {
     }
     async spisokAdd (req, res, next) {
         const name = req.body.name;
-        
 
-        return res.json({'name': `${name}`});
+        
 
     }
 }
