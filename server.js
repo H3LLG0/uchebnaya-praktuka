@@ -1,7 +1,6 @@
 const express = require('express');
 const jsonParser = express.json();
 const cors = require('cors');
-const database = require('./database/database');
 const router = require('./router/index');
 require('dotenv').config();
 

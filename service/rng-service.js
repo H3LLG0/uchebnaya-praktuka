@@ -1,8 +1,13 @@
 class rngService {
     rng(max) {
-        // случайное число от min до (max+1)
         let rand = 0 + Math.random() * (max + 1 - 0);
-        return Math.floor(rand);
+
+        if (Math.floor(rand) == max) {
+            return Math.floor(rand) - 1;
+        }
+        else {
+            return Math.floor(rand);
+        }
       }
 }
 
