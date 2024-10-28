@@ -11,6 +11,15 @@ class userController {
             return res.json({'value': users[number].fio})
         });
     }
+    async GetInn(req, res, next) {
+        Users.inn((err, inn) => {
+            if(err) return next(err);
+
+            let number = rngService.rng(inn.length - 1);
+
+            return res.json({'value': inn[number].inn})
+        });
+    }
 }
 
 module.exports = new userController();

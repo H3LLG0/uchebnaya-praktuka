@@ -6,9 +6,8 @@ const userController = require('../controllers/user-controller')
 
 const router = new Router();
 
-// router.post('/resultPlus', jsonParser , resultController.resultPlus);
-// router.get("/getUser",jsonParser, userController.GetUser);
+router.get('/fullName', jsonParser, userController.GetFio);
+router.get('/inn', jsonParser, userController.GetInn);
 
-router.get('/fullName', jsonParser, userController.GetFio)
 
 module.exports = router;
