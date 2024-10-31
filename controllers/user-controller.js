@@ -20,6 +20,15 @@ class userController {
             return res.json({'value': inn[number].inn})
         });
     }
+    async GetEmail (req, res, next) {
+        Users.email((err, email) => {
+            if(err) return next(err);
+
+            let number = rngService.rng(email.length - 1);
+
+            return res.json({'value': email[number].email})
+        })
+    }
 }
 
 module.exports = new userController();

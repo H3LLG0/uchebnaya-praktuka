@@ -5,7 +5,9 @@ db.serialize(() => {
     const sql = `CREATE TABLE IF NOT EXISTS Users
                 (id integer primary key, fio TEXT);
                 CREATE TABLE IF NOT EXISTS Inn
-                (id integer primary key, inn TEXT);`;
+                (id integer primary key, inn TEXT);
+                CREATE TABLE IF NOT EXISTS Email
+                (id integer primary key, email TEXT);`;
 
     db.run(sql);
 })
@@ -16,6 +18,9 @@ class Users {
     }
     static inn(cb) {
         db.all('SELECT * FROM Inn', cb);
+    }
+    static email(cb) {
+        db.all('SELECT * FROM Email', cb);
     }
 }
 

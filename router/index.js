@@ -8,6 +8,7 @@ const router = new Router();
 
 router.get('/fullName', jsonParser, userController.GetFio);
 router.get('/inn', jsonParser, userController.GetInn);
+router.get('/email', jsonParser, userController.GetEmail);
 
 
 module.exports = router;
