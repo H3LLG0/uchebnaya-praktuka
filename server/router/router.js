@@ -6,6 +6,6 @@ const UserController = require('../controllers/user-controller');
 
 const router = new Router();
 
-router.get('/allUsers', jsonParser, UserController.reg)
+router.post('/allUsers', jsonParser, UserController.reg)
 
 module.exports = router;
