@@ -3,7 +3,7 @@ const UserService = require('../service/user-service')
 class UserController {
     async reg(req, res, next) {
         try {
-            let find = await UserService.FindUser(req.body.login);
+            let find = await UserService.identification(req.body.login);
             switch(find) {
                 case true:
                     UserService.RegisterUser(req.body);
@@ -18,7 +18,21 @@ class UserController {
         }
     }
     async Auth(req,res,next) {
-        
+        try {
+            let find = await UserService.identification(req.body.login);
+            switch(find) {
+                case true:
+                    res.json({'messege':'Ошибка: неверный логин или пароль'});
+                    break;
+                case false:
+                    const user = UserService.GetUser(req.body.login, req.body.password);
+
+                    res.json(user);
+                    break;
+            }
+        } catch (next) {
+            console.log(next);
+        }
     }
 }
 
