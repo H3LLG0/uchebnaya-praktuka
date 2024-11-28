@@ -6,7 +6,7 @@ const UserController = require('../controllers/user-controller');
 
 const router = new Router();
 
-router.post('/registration', jsonParser, UserController.reg);
-router.post('/authorisation', jsonParser, UserController.Auth)
+router.get('/auth',jsonParser, UserController.auth)
+
 
 module.exports = router;
