@@ -1,6 +1,7 @@
 const express = require('express');
 const jsonParser = express.json();
 const cors = require('cors');
+const CookieParser = require('cookie-parser');
 const router = require('./router/router');
 
 require('dotenv').config();
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(CookieParser(process.env.COOKIE_KEY));
 app.use('/api',router)
 
 const start = async () => {
