@@ -49,6 +49,15 @@ class UserController {
             console.log(e);
         }
     }
+    async GetAllUsers (req, res, next) {
+        try {
+            const users = await UserService.GetAll();
+
+            res.json(await users);
+        } catch(e) {
+            console.log(e);
+        }
+    }
 }
 
 module.exports = new UserController;

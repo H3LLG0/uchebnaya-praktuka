@@ -36,6 +36,15 @@ class UserService {
 
     return await add;
   }
+  async GetAll() {
+    let users = connection.query("SELECT * FROM users")
+    .then(([rows, fields]) =>{
+      return rows;
+    })
+    .catch(err => console.log(err))
+
+    return await users;
+  }
 
 }
 
