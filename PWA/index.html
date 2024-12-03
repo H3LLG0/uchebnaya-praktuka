@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>DemoApp</title>
+</head>
+<body>
+    <header></header>
+    <div class="wrapper">
+        <h1>Добро пожаловать</h1>
+        <form id="login-form">
+            <label for="login">Логин</label><br>
+            <input type="text" placeholder="Логин" id="login" name="login"><br>
+            <label for="password">Пароль</label><br>
+            <input type="password" placeholder="Пароль" id="password" name="password"><br>
+            <button type="submit">Вход</button>
+        </form>
+        <div class="reg-link">
+            нет аккаунта? - <a href="register.html">зерегистрироваться</a>
+        </div>
+        <span class="err">
+            
+        </span>
+    </div>
+    <footer></footer>
+    <script src="scripts/login.js"></script>
+    <script>
+        window.addEventListener('beforeinstallprompt', (event) => {
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>

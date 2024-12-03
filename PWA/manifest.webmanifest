@@ -1,0 +1,13 @@
+{
+    "name":"demoApp",
+    "start_url":"index.html",
+    "display":"fullscreen",
+    "orientation":"portaint",
+    "icons": [
+        {
+            "src":"assets/images/performance.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+    ]
+}
